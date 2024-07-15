@@ -1,0 +1,101 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+
+.info {
+    background: url('../img/bg/Rectangle\ 113.png');
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+    height: 50.9rem;
+    padding: 6rem 0 3.8rem 6rem;
+    
+    margin-bottom: $margin-xmedium;
+
+    h2 {
+        color: $clr-white;
+        font-family: $second-family;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+
+        max-width: 77.6rem;
+        margin-bottom: 12.9rem;
+    }
+
+    h3 {
+        color: $clr-white;
+        font-family: $second-family;
+        font-size: 3.4rem;
+        text-transform: uppercase;
+
+        max-width: 36.3rem;
+        margin-bottom: 1.6rem;
+    }
+
+    p {
+        color: $clr-white;
+        font-size: $font-size-m;
+        font-weight: 500;
+
+        margin-bottom: 3.1rem;
+    }
+
+    .info__bottom {
+        @include flex-row-center();
+
+        .info__bottom-element {
+            cursor: pointer;
+            width: 1.3rem;
+            height: 0.5rem;
+            background: $clr-white;
+            opacity: 30%;
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
+            margin-right: 0.5rem;
+
+            &:first-child {
+                width: 3.2rem;
+                opacity: 100%;
+            }
+
+            @include lastChild();
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .info {
+        height: 39rem;
+        padding: $padding-regular 0 $padding-xsmall 2.4rem;
+        h2 {
+            max-width: 22.6rem;
+            font-size: $font-size-x;
+
+            margin-bottom: 12.4rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            max-width: 18.6rem;
+            margin-bottom: $margin-xxsmall;
+        }
+
+        p {
+            display: none;
+        }
+
+        .none {
+            @include flex-row-center();
+            column-gap: 0.9rem;
+
+            color: $clr-white;
+            font-weight: 500;
+
+            margin-bottom: 1.2rem;
+        }
+    }
+}

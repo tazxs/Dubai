@@ -1,0 +1,78 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+
+.offers {
+    margin-bottom: 11rem;
+    .offers__title {
+        @include flex-row();
+        margin-bottom: $margin-xmedium;
+        @include respond-to('phone') {
+            margin-bottom: 2.4rem;
+        }
+
+        .offers__title-buttons {
+            @include flex-row-center();
+            column-gap: 1rem;
+            @include respond-to('phone') {
+                display: none;
+            }
+
+            .hero__btn {
+                padding: $padding-xsmall 2.1rem $padding-xsmall 1.9rem;
+                border: 0.1rem solid $clr-black;
+                border-radius: $radius-small;
+                -webkit-border-radius: $radius-small;
+                -moz-border-radius: $radius-small;
+                -ms-border-radius: $radius-small;
+                -o-border-radius: $radius-small;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                width: 5rem;
+                height: 5rem;
+
+                @include flex-aligning();
+
+                color: $clr-black;
+
+                &:hover {
+                    border: 0.1rem solid $clr-primary-blue;
+                    color: $clr-primary-blue;
+                }
+
+                &:active {
+                    background: $clr-primary-blue;
+                    color: $clr-white;
+                    transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                }
+            }
+
+            .hero__btn-left {
+                left: 2rem;
+                top: 16.1rem;
+            }
+        }
+    }
+
+    .offers__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 43.3rem);
+        grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .offers {
+        margin-bottom: $margin-xmedium;
+        .offers__grid {
+            grid-template-columns: 33.5rem;
+        }
+    }
+}

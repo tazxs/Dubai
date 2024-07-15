@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto+Slab:wght@100..900&family=Saira+Stencil+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/catalog-developer.min.css">
+    <title>Каталог районы</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_container container">
+            <div class="header_line">
+                <div class="logo">
+                    <a href="#" class="logo_link">CodeCultis</a>
+                </div>
+                <nav class="nav">
+                    <a href="./pages/catalog-sale.html" class="nav_link">Продажа</a>
+                    <a href="" class="nav_link">Аренда</a>
+                    <a href="/pages/" class="nav_link">Новостройки</a>
+                    <a href="#" class="nav_link">Виллы</a>
+                    <a href="/pages/magazine.html" class="nav_link">Сервисы</a>
+                    <a href="./pages/FAQ.html" class="nav_link">Компания</a>
+                </nav>
+                <div class="selects">
+                    <div class="selectable" data-dropdown="location-dropdown">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Дубай</p>
+                        <div class="dropdown" id="location-dropdown" style="display: none;">
+                            <p data-value="Абу-Даби">Абу-Даби</p>
+                            <p data-value="Шарджа">Шарджа</p>
+                            <p data-value="Аджман">Аджман</p>
+                            <p data-value="Фуджейра">Фуджейра</p>
+                            <p data-value="Рас-аль-Хайма">Рас-аль-Хайма</p>
+                            <p data-value="Умм-аль-Кувейн">Умм-аль-Кувейн</p>
+                        </div>
+                    </div>
+                    <div class="selectable" data-dropdown="language-dropdown">
+                        <i class="fa-solid fa-language"></i>
+                        <p>ру</p>
+                        <div class="dropdown" id="language-dropdown" style="display: none;">
+                            <p data-value="англ">англ</p>
+                            <p data-value="фр">фр</p>
+                            <p data-value="нем">нем</p>
+                        </div>
+                    </div>
+                    <div class="selectable" data-dropdown="currency-dropdown">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <p>Доллар</p>
+                        <div class="dropdown" id="currency-dropdown" style="display: none;">
+                            <p data-value="Евро">Евро</p>
+                            <p data-value="Рубль">Рубль</p>
+                            <p data-value="Йена">Йена</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification" id="notification" style="opacity: 0;">Выбрано: Дубай</div>
+                <div class="buttons">
+                    <a href="#" class="buttons_link">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                    <a href="" class="buttons_link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="" class="buttons_link">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </a>
+                    <a href="" class="buttons_link">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="header_mobile">
+        <div class="header_container container">
+            <div class="mobile_line">
+                <div class="logo">
+                    <a href="#" class="logo_link">CodeCultis</a>
+                </div>
+                <div class="mobile_buttons">
+                    <div class="buttons">
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                    <div class="menu-icon" id="menuBtn">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+                <div class="fullscreen-menu" id="fullscreenMenu">
+                    <div class="fullscreen-menu__top">
+                        <div class="logo">
+                            <a href="#" class="logo_link">CodeCultis</a>
+                        </div>
+                        <div class="close-btn" id="closeBtn">
+                            <i class="fa fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="fullscreen-menu__hero">
+                        <div class="selects">
+                            <div class="selectable" data-dropdown="location-dropdown">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Дубай</p>
+                                <div class="dropdown" id="location-dropdown" style="display: none;">
+                                    <p data-value="Абу-Даби">Абу-Даби</p>
+                                    <p data-value="Шарджа">Шарджа</p>
+                                    <p data-value="Аджман">Аджман</p>
+                                    <p data-value="Фуджейра">Фуджейра</p>
+                                    <p data-value="Рас-аль-Хайма">Рас-аль-Хайма</p>
+                                    <p data-value="Умм-аль-Кувейн">Умм-аль-Кувейн</p>
+                                </div>
+                            </div>
+                            <div class="selectable" data-dropdown="language-dropdown">
+                                <i class="fa-solid fa-language"></i>
+                                <p>ру</p>
+                                <div class="dropdown" id="language-dropdown" style="display: none;">
+                                    <p data-value="англ">англ</p>
+                                    <p data-value="фр">фр</p>
+                                    <p data-value="нем">нем</p>
+                                </div>
+                            </div>
+                            <div class="selectable" data-dropdown="currency-dropdown">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                                <p>Доллар</p>
+                                <div class="dropdown" id="currency-dropdown" style="display: none;">
+                                    <p data-value="Евро">Евро</p>
+                                    <p data-value="Рубль">Рубль</p>
+                                    <p data-value="Йена">Йена</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fullscreen-menu__content">
+                        <a class="mobile_link" href="./pages/catalog-sale.html">Продажа</a>
+                        <a class="mobile_link" href="">Аренда</a>
+                        <a class="mobile_link" href="/pages/">Новостройки</a>
+                        <a class="mobile_link" href="#">Виллы</a>
+                        <a  class="mobile_link"href="/pages/magazine.html">Сервисы</a>
+                        <a class="mobile_link" href="./pages/FAQ.html">Компания</a>
+                    </div>
+                    <div class="fullscreen-menu__footer">
+                        <div class="menu_footer__block">
+                            <a href="#" class="buttons_link">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </a>
+                            <p class="footer_block__text"> Избранное </p>
+                        </div>
+                        <div class="menu_footer__block">
+                            <a href="" class="buttons_link">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                            <p class="footer_block__text">+ 7 232-232-23-23</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="path">
+                <ul class="path-list">
+                    <li class="path-item"><a href="#" class="path-link">Недвижимость в Дубаи</a></li>
+                    <li class="path-item"><a href="#" class="path-link">Продажа</a></li>
+                    <li class="path-item"><a href="#" class="path-link">Виллы</a></li>
+                    <li class="path-item"><a href="#" class="path-link">15 290 предложений</a></li>
+                </ul>
+            </div>
+
+            <section class="area">
+                <div class="area__title">
+                    <h1 class="title">Районы</h1>
+
+                    <div class="area__title-buttons">
+                        <a href="#" class="btn-border">
+                            За все время
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <a href="#" class="btn-border">
+                            На карте
+                            <i class="fa-solid fa-location-dot"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="area__grid-before none">
+                    <h2>32 района</h2>
+                    <img src="../img/icons/placeholder 1.png" alt="Фильтры" class="before-btn">
+                </div>
+
+                <div class="area__grid">
+                    <article class="area__card area__card-1 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Bur Dubai</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="area__card area__card-2 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Downtown Dubai</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="area__card area__card-3 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Dubai Marina</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="area__card area__card-1 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Bur Dubai</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="area__card area__card-2 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Downtown Dubai</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="area__card area__card-3 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Dubai Marina</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="area__card area__card-1 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Bur Dubai</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="area__card area__card-2 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Downtown Dubai</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="area__card area__card-3 card-2">
+                        <div class="area__card-bottom">
+                            <h2>Dubai Marina</h2>
+
+                            <div class="bottom-flex">
+                                <p>от 43 240 $</p>
+                                <p>.</p>
+                                <p>10 предложений</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn-right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="area__bottom">
+                    <div class="area__bottom-left">
+                        <a href="" class="area__bottom-element">
+                            1
+                        </a>
+                        <a href="" class="area__bottom-element">
+                            2
+                        </a>
+                        <a href="" class="area__bottom-element">
+                            3
+                        </a>
+                        <a href="" class="area__bottom-element">
+                            4
+                        </a>
+                        <a href="" class="area__bottom-element">
+                            ...
+                        </a>
+                        <a href="" class="area__bottom-element">
+                            15
+                        </a>
+                    </div>
+
+                    <div class="area__bottom-right">
+                        <a href="#" class="btn-blue-large">
+                            Подписаться на новые объявления
+                        </a>
+
+                        <a href="#" class="btn-border-2">
+                            Сохранить файлы в Exel
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info">
+                <h2>Квартиры с невероятным 
+                    видом на море </h2>
+
+                <h3>azizi mina palm jumeirah</h3>
+
+                <p>от 43 240 $</p>
+
+                <p class="none">
+                    от 43 240 $
+                    <img src="../img/icons/Ellipse 11.png" alt=".">
+                    10 предложений
+                </p>
+
+                <div class="info__bottom">
+                    <div class="info__bottom-element"></div>
+                    <div class="info__bottom-element"></div>
+                    <div class="info__bottom-element"></div>
+                    <div class="info__bottom-element"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_content__text">
+                    ЦИАН — база данных о недвижимости. Использование сайта означает согласие с Пользовательским соглашением и Политикой конфиденциальности ЦИАН. Оплачивая лицензионный платеж, вы принимаете Лицензионное соглашение. Страницу делал Динур.
+                </div>
+                <nav class="footer_content__nav">
+                    <a href="#" class="footer_link">Справочный центр</a>
+                    <a href="#" class="footer_link">Юридические документы</a>
+                    <a href="#" class="footer_link">Тарифы и цены</a>
+                    <a href="#" class="footer_link">Помощь</a>
+                    <a href="#" class="footer_link">Поиск на карте</a>
+                    <a href="#" class="footer_link">Проверка недвижимости</a>
+                    <a href="#" class="footer_link">Карта сайта</a>
+                    <a href="#" class="footer_link">Свежие объявления</a>
+                    <a href="#" class="footer_link">Карьера в Циан</a>
+                </nav>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_bottom__left">
+                    <div class="logo">
+                        <a href="#" class="logo_link">CodeCultis</a>
+                    </div>
+                    <div class="buttons">
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-vk"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_bottom__right">
+                    <a href="#" class="btn">Доступно в AppStore</a>
+                    <a href="#" class="btn">Доступно в GooglePlay</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer_mobile">
+        <div class="container">
+            <div class="footer_top">
+                <div class="footer_content__text">
+                    ЦИАН — база данных о недвижимости. Использование сайта означает согласие с Пользовательским соглашением и Политикой конфиденциальности ЦИАН. Оплачивая лицензионный платеж, вы принимаете Лицензионное соглашение. Страницу делал Динур.
+                </div>
+            </div>
+            <div class="footer_content">
+                <div class="footer_content__top">
+                    <div class="logo">
+                        <a href="#" class="logo_link">CodeCultis</a>
+                    </div>
+                    <div class="buttons">
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-vk"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="" class="buttons_link">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer_content__nav">
+                    <div class="footer_nav__left">
+                        <a href="#" class="footer_link">Справочный центр</a>
+                        <a href="#" class="footer_link">Юридические документы</a>
+                        <a href="#" class="footer_link">Тарифы и цены</a>
+                        <a href="#" class="footer_link">Помощь</a>
+                        <a href="#" class="footer_link">Поиск на карте</a>
+                    </div>
+                    <div class="footer_nav__right">
+                        <a href="#" class="footer_link">Проверка недвижимости</a>
+                        <a href="#" class="footer_link">Карта сайта</a>
+                        <a href="#" class="footer_link">Свежие объявления</a>
+                        <a href="#" class="footer_link">Карьера в Циан</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_bottom__buttons">
+                    <a href="#" class="btn">Доступно в AppStore</a>
+                    <a href="#" class="btn">Доступно в GooglePlay</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+</body>
+</html>

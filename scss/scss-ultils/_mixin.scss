@@ -1,0 +1,186 @@
+@mixin respond-to($media) {
+    @if $media=='phone' {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+}
+
+@mixin click() {
+    position: relative;
+    top: 0.1rem;
+}
+
+/* Flex Mixins */
+@mixin flex-row($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row-start() {
+    display: flex;
+    align-items: flex-start;
+}
+
+@mixin flex-row-end() {
+    display: flex;
+    align-items: flex-end;
+}
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-reverse() {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flex-column-center() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column-start() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin flex-column-end() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@mixin flex-wrap() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-aligning() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text Mixins */
+@mixin TextH2StyleCard () {
+    color: $clr-black;
+    font-size: $font-size-x;
+    line-height: 2.491rem;
+    text-transform: uppercase;
+
+    margin-bottom: $margin-xsmall;
+}
+
+@mixin TextH3StyleCard () {
+    color: $clr-black;
+    font-size: $font-size-xl;
+    font-weight: 500;
+
+    @include respond-to('phone') {
+        font-size: $font-size-x;
+    }
+}
+
+@mixin TextPStyleCard () {
+    color: $clr-black;
+    font-size: $font-size-m;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    margin-bottom: $margin-xxsmall;
+
+    span {
+        opacity: 40%;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+    }
+
+    @include respond-to('phone') {
+        margin-bottom: 0.8rem;
+    }
+}
+
+@mixin Text-A-StyleCard() {
+    @include flex-row-center();
+    column-gap: 0.4rem;
+
+    color: $clr-black;
+    font-size: $font-size-xl;
+    font-weight: 500;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    &:hover {
+        color: $clr-primary-red;
+    }
+
+    &:active {
+        @include click();
+    }
+
+    @include respond-to('phone') {
+        font-size: $font-size-x;
+    }
+}
+
+/* Animation */
+@mixin animtaionEmat() {
+    animation-name: emat;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Миксины Данияра */
+
+@mixin flexbox(
+    $display: flex,
+    $direction: row,
+    $alignContent: flex-start,
+    $justifyContent: space-between,
+    $alignItems: center,
+    $flexWrap: nowrap
+) {
+    display: $display;
+    flex-direction: $direction;
+    align-content: $alignContent;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flex-center {
+    @include flexbox($alignContent: center, $justifyContent: center, $alignItems: center);
+}
+
+@mixin lastChild() {
+    &:last-child {
+        margin-right: 0;
+    }
+}

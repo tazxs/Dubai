@@ -1,0 +1,267 @@
+$clr-white: #FFF;
+$clr-black: #000;
+
+$clr-primary-gray: #595959;
+$clr-primary-blue: #208B95;
+$clr-primary-red: #F72F2F;
+$clr-primary-yellow: hsl(42, 78%, 60%);
+
+$clr-border: #0000001A;
+$clr-border-2: #00000033;
+
+$font-size-xxl: 8rem;
+$font-size-xxl: 3.6rem;
+$font-size-xxs: 3.2rem;
+$font-size-xl: 2.8rem;
+$font-size-z: 2.1rem;
+$font-size-x: 2.4rem;
+$font-size-l: 1.8rem;
+$font-size-m: 1.6rem;
+$font-size-s: 1.5rem;
+$font-size-ss: 1.4rem;
+$font-size-sss: 1.2rem;
+
+$margin-xxsmall: 1rem;
+$margin-xzsmall: 1.6rem;
+$margin-xsmall: 2rem;
+$margin-small: 3rem;
+$margin-regular: 4rem;
+$margin-medium: 5rem;
+$margin-xmedium: 6rem;
+$margin-xxmedium: 7rem;
+$margin-large: 10rem;
+
+$padding-xxsmall: 1rem;
+$padding-xsmall: 2rem;
+$padding-xssmall: 2.4rem;
+$padding-small: 3rem;
+$padding-regular: 4rem;
+$padding-medium: 5rem;
+$padding-xmedium: 6rem;
+$padding-xxmedium: 7rem;
+$padding-large: 10rem;
+
+$transition-fast: 0.3s ease-out;
+$transition-medium: 0.5s ease-out;
+$transition-long: 0.8s ease-out;
+
+$radius-small: 4.5rem;
+$radius-large: 9.9rem;
+
+$shadow: -0.1rem 0.6rem 1rem 0.5rem 0rem rgba(0, 0, 0, 0.75);
+
+$first-family: "Commissioner", sans-serif;
+$second-family: "Roboto Slab", serif;
+$three-family: "Saira Stencil One",
+sans-serif;
+
+$header-padding-top-desktop: 3.9rem;
+$header-margin-bottom-desktop: 9.6rem;
+$font-size-logo-desktop: 2.1rem;
+$font-size-nav-link-desktop: 1.6rem;
+$font-size-selectable-icon-desktop: 1.3rem;
+$font-size-selectable-text-desktop: 16px;
+$font-size-button-icon-desktop: 1.8rem;
+
+$container-width: 1340px;
+
+@keyframes emat {
+    0% {
+        transform: scale(0.98);
+        -webkit-transform: scale(0.98);
+        -moz-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        -o-transform: scale(0.98);
+    }
+
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+// Пульсирующий эффект
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+// Вращение
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Прыжок
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+// Мигание
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+// Встряска
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+// Поворот
+@keyframes flip {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+// Увеличение
+@keyframes zoom-in {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+// Уменьшение
+@keyframes zoom-out {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+// Подъем
+@keyframes rise {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// Падение
+@keyframes fall {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// Расширение
+@keyframes expand {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+// Сужение
+@keyframes contract {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+//Container
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+    @include respond-to('phone') {
+        max-width: 335px;
+    }
+}
+
+//HTML,BODY
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $first-family;
+}
+
+//none
+.none {
+    display: none;
+}
+
+/* Title */
+.title {
+    color: $clr-black;
+    font-family: $second-family;
+    font-size: $font-size-xxl;
+    text-transform: uppercase;
+    @include respond-to('phone') {
+        font-size: 3.2rem;
+    }
+}

@@ -1,0 +1,238 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+
+.card {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+
+    &:hover {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+    }
+
+    .hero__card-img {
+        margin-bottom: $margin-small;
+    }
+
+    .hero__card-bottom {
+        padding-left: 2.4rem;
+
+        h2 {
+            @include TextH2StyleCard();
+            max-width: 30rem
+        }
+
+        .bottom-row {
+            @include flex-row-center();
+            column-gap: 1.9rem;
+            margin-bottom: $margin-xsmall;
+
+            .bottom-element {
+                @include flex-row-center();
+                column-gap: 1.3rem;
+                color: $clr-black;
+                font-size: $font-size-m;
+                opacity: 40%;
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+
+                &:hover {
+                    transform: rotate(-8deg);
+                    -webkit-transform: rotate(-8deg);
+                    -moz-transform: rotate(-8deg);
+                    -ms-transform: rotate(-8deg);
+                    -o-transform: rotate(-8deg);
+                }
+
+                &:active {
+                    color: $clr-primary-red;
+                }
+            }
+        }
+
+        p {
+            @include TextPStyleCard();
+        }
+
+        .bottom-row-2 {
+            @include flex-row-center();
+
+            h3 {
+                @include TextH3StyleCard();
+                margin-right: 1.6rem;
+            }
+
+            .usd-link {
+                @include Text-A-StyleCard();
+                margin-right: 2.9rem;
+
+                i {
+                    font-size: $font-size-ss;
+                }
+            }
+        }
+    }
+
+    @include respond-to('phone') {
+        .hero__card-img {
+            margin-bottom: 2.4rem;
+            width: 33.5rem;
+        }
+
+        .hero__card-bottom {
+            padding-left: $padding-xsmall;
+
+            h2 {
+                max-width: 26rem;
+            }
+
+            .bottom-row-2 {
+                margin-top: 1.1rem;
+
+                .none {
+                    padding: 2.5rem 2rem;
+                    border-radius: $radius-large;
+                    -webkit-border-radius: $radius-large;
+                    -moz-border-radius: $radius-large;
+                    -ms-border-radius: $radius-large;
+                    -o-border-radius: $radius-large;
+                    background: $clr-primary-blue;
+
+                    width: 5rem;
+                    height: 5rem;
+
+                    @include flex-aligning();
+
+                    color: $clr-white;
+                }
+
+                .btn-blue-small {
+                    display: none;
+                }
+            }
+
+            .hero__card-phone,
+            .hero__card-favorites {
+                @include flex-aligning();
+            }
+        }
+    }
+}
+
+.card-2 {
+    background: url('../img/images/Restangle\ 100.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+    height: 64.9rem;
+
+    .area__card-bottom {
+        border-top-left-radius: $radius-small;
+        border-bottom-right-radius: $radius-small;
+        background: $clr-primary-blue;
+        padding: 5.3rem 0 0 3.7rem;
+        width: 32rem;
+        height: 18rem;
+
+        margin-bottom: 38.9rem;
+
+        h2 {
+            color: $clr-white;
+            font-size: 3.4rem;
+            text-transform: uppercase;
+        }
+
+        .bottom-flex {
+            @include flex-row-center();
+            column-gap: 0.8rem;
+
+            p {
+                color: $clr-white;
+                font-size: $font-size-m;
+                position: relative;
+
+                &:nth-child(2) {
+                    font-size: 3rem;
+                    bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    .btn-right {
+        padding: 2.5rem;
+        background: $clr-white;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+
+        width: 5rem;
+        height: 5rem;
+
+        margin-left: 3rem;
+
+        @include flex-aligning();
+
+        color: $clr-black;
+
+        &:hover {
+            background: $clr-primary-blue;
+            color: $clr-white;
+        }
+
+        &:active {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+        }
+    }
+    @include respond-to('phone') {
+        height: 42.6rem;
+        .area__card-bottom {
+            padding: 3.2rem 0 $padding-small 2.4rem;
+            width: 21.5rem;
+            height: 10.5rem;
+            margin-bottom: 24.5rem;
+            h2 {
+                font-size: 2rem;
+
+                margin-bottom: $margin-xxsmall;
+            }
+
+            .bottom-flex {
+                column-gap: 0.9rem;
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .btn-right {
+        padding: 2.6rem 2.008rem 2.6rem 1.976rem;
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+}

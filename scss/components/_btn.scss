@@ -1,0 +1,151 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+
+.btn-border {
+    display: inline-block;
+    padding: 1.5rem 3.2rem;
+    border: 0.1rem solid $clr-black;
+    border-radius: $radius-small;
+    -webkit-border-radius: $radius-small;
+    -moz-border-radius: $radius-small;
+    -ms-border-radius: $radius-small;
+    -o-border-radius: $radius-small;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    text-transform: uppercase;
+
+    color: $clr-black;
+    font-size: $font-size-m;
+
+    span {
+        opacity: 65%;
+        padding-left: 4rem;
+    }
+
+    i {
+        font-size: $font-size-sss;
+        padding-left: 4rem;
+    }
+
+    &:hover {
+        border: 0.1rem solid $clr-primary-blue;
+        color: $clr-primary-blue;
+    }
+
+    &:active {
+        border: 0.1rem solid $clr-primary-blue;
+        background: $clr-primary-blue;
+        color: $clr-black;
+        transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+    }
+
+    @include respond-to('phone') {
+        padding: 1.2rem 2.4rem;
+
+        font-size: $font-size-sss;
+    }
+}
+
+.btn-border-2 {
+    display: inline-block;
+
+    padding: 2.3rem 3.3rem;
+    border: 0.1rem solid $clr-black;
+    border-radius: $radius-large;
+    -webkit-border-radius: $radius-large;
+    -moz-border-radius: $radius-large;
+    -ms-border-radius: $radius-large;
+    -o-border-radius: $radius-large;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    text-transform: uppercase;
+
+    color: $clr-black;
+    font-size: $font-size-ss;
+
+    &:hover {
+        border: 0.1rem solid $clr-primary-blue;
+        color: $clr-primary-blue;
+    }
+
+    &:active {
+        border: 0.1rem solid $clr-primary-blue;
+        background: $clr-primary-blue;
+        color: $clr-black;
+        transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        -o-transform: rotate(-2deg);
+    }
+}
+
+.btn-blue-small {
+    padding: 1.8rem 4.1rem 1.7rem 4.1rem;
+    background: $clr-primary-blue;
+    border-radius: $radius-large;
+    -webkit-border-radius: $radius-large;
+    -moz-border-radius: $radius-large;
+    -ms-border-radius: $radius-large;
+    -o-border-radius: $radius-large;
+
+    color: $clr-white;
+    font-size: $font-size-ss;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $clr-primary-yellow;
+        color: $clr-black;
+    }
+
+    &:active {
+        @include click();
+    }
+}
+
+.btn-blue-large {
+    display: inline-block;
+
+    padding: 2.3rem 3.9rem;
+    background: $clr-primary-blue;
+    border-radius: $radius-large;
+    -o-transition: $transition-fast;
+    -webkit-border-radius: $radius-large;
+    -moz-border-radius: $radius-large;
+    -ms-border-radius: $radius-large;
+    -o-border-radius: $radius-large;
+
+    color: $clr-white;
+    font-size: $font-size-ss;
+
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $clr-primary-yellow;
+        color: $clr-black;
+    }
+
+    &:active {
+        @include click();
+    }
+}

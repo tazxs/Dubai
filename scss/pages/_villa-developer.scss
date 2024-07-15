@@ -1,0 +1,282 @@
+@import '../scss-ultils/mixin';
+@import '../scss-ultils/variables';
+
+.villa {
+    margin-bottom: 19.2rem;
+
+    .villa__wrapper {
+        @include flex-row-center();
+        column-gap: 13.5rem;
+
+        .villa__left {
+            .villa__title {
+                color: $clr-black;
+                font-size: 6.4rem;
+                text-transform: uppercase;
+
+                margin-bottom: $margin-xmedium;
+                max-width: 46.8rem;
+
+                @include respond-to('phone') {
+                    margin-bottom: 2.4rem;
+                    max-width: 21.7rem;
+
+                    font-size: 3rem;
+                }
+            }
+
+            p {
+                color: $clr-primary-gray;
+                font-size: $font-size-l;
+                line-height: 2.2rem;
+
+                max-width: 66rem;
+                margin-bottom: 8rem;
+
+                @include respond-to('phone') {
+                    margin-bottom: $margin-regular;
+                    font-size: $font-size-ss;
+                }
+            }
+
+            .villa__grid {
+                display: grid;
+                grid-template-columns: repeat(2, 24.7rem);
+                column-gap: 9.3rem;
+                row-gap: 8.4rem;
+
+                margin-bottom: 6.1rem;
+                .villa__element {
+                    @include animtaionEmat();
+                    h2 {
+                        color: $clr-black;
+                        font-size: 6.4rem;
+    
+                        margin-bottom: 0.8rem;
+                    }
+
+                    h3 {
+                        color: $clr-black;
+                        font-size: $font-size-l;
+                    }
+                }
+            }
+
+            .btn-blue-large {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .villa__right {
+            background: url('../img/images/Mask\ group\ 3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 7.2rem 0 9.047rem $padding-regular;
+            width: 54.4rem;
+            height: 100rem;
+
+            h2 {
+                color: $clr-white;
+                font-size: 4.8rem;
+                line-height: 4.8rem;
+
+                max-width: 37.7rem;
+                margin-bottom: 2.6rem;
+
+                text-transform: uppercase;
+            }
+
+            h3 {
+                color: $clr-white;
+                font-size: $font-size-l;
+                max-width: 34.2rem;
+                line-height: 2.7rem;
+
+                margin-bottom: 49.7rem;
+            }
+
+            h4 {
+                color: $clr-white;
+                font-size: 2rem;
+
+                margin-bottom: $margin-xxsmall;
+            }
+
+            p {
+                margin-bottom: 0.7rem;
+
+                color: $clr-white;
+                font-size: $font-size-m;
+                font-weight: 500;
+            }
+
+            .villa__buttons {
+                @include flex-row-center();
+                column-gap: 0.885rem;
+
+                a {
+                    padding: 1.327rem;
+                    border: 0.1rem solid $clr-white;
+                    border-radius: 100%;
+                    -webkit-border-radius: 100%;
+                    -moz-border-radius: 100%;
+                    -ms-border-radius: 100%;
+                    -o-border-radius: 100%;
+                    transition: $transition-fast;
+                    -webkit-transition: $transition-fast;
+                    -moz-transition: $transition-fast;
+                    -ms-transition: $transition-fast;
+                    -o-transition: $transition-fast;
+
+                    width: 4.6rem;
+                    height: 4.6rem;
+
+                    @include flex-aligning();
+
+                    color: $clr-white;
+                    font-size: $font-size-l;
+
+                    &:hover {
+                        border: 0.1rem solid $clr-primary-blue;
+                        color: $clr-primary-blue;
+                    }
+
+                    &:active {
+                        background: $clr-primary-blue;
+                        color: $clr-white;
+                        transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -ms-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                    }
+
+                    &:last-child {
+                        &:active {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                            -moz-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            -o-transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        position: absolute;
+        width: 100%;
+        height: 0.1rem;
+        background: $clr-black;
+        left: 0;
+        top: 230.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .villa {
+        margin-bottom: 12rem;
+
+        .villa__wrapper {
+            @include flex-column();
+            row-gap: 4rem;
+
+            .villa__left {
+                max-width: 33.5rem;
+
+                .villa__title {
+                    font-size: 3.2rem;
+                    margin-bottom: 2.2rem;
+                }
+
+                .villa__grid {
+                    grid-template-columns: repeat(2, 14.7rem);
+                    column-gap: 2.6rem;
+                    row-gap: 3rem;
+
+                    margin-bottom: $margin-xsmall;
+
+                    .villa__element {
+                        h2 {
+                            font-size: 3.8rem;
+
+                            margin-bottom: 2.1rem;
+                        }
+
+                        h3 {
+                            font-size: $font-size-ss;
+                            max-width: 16.3rem;
+                        }
+                    }
+                }
+
+                .left-bottom {
+                    column-gap: 5.7rem;
+                    margin-bottom: $margin-xsmall;
+                }
+            }
+
+            .villa__right {
+                padding: $padding-regular 0 $padding-xsmall 2.1rem;
+                width: 33.5rem;
+                height: 44.8rem;
+                border-radius: 3.2rem;
+                -webkit-border-radius: 3.2rem;
+                -moz-border-radius: 3.2rem;
+                -ms-border-radius: 3.2rem;
+                -o-border-radius: 3.2rem;
+                background-position: right;
+
+                h2 {
+                    display: none;
+                }
+
+                .none {
+                    display: block;
+
+                    color: $clr-white;
+                    font-size: $font-size-x;
+                    line-height: 2.4rem;
+                    max-width: 26.1rem;
+
+                    margin-bottom: 1.4rem;
+                }
+
+                h3 {
+                    font-size: $font-size-sss;
+                    max-width: 22.1rem;
+                    line-height: 1.8rem;
+
+                    margin-bottom: 14.8rem;
+                }
+
+                h4 {
+                    font-size: $font-size-m;
+
+                    margin-bottom: 0.8rem;
+                }
+
+                p {
+                    font-size: $font-size-sss;
+                    margin-bottom: 0.5rem;
+                }
+
+                .villa__buttons {
+                    column-gap: 0.712rem;
+                    margin-top: 1.6rem;
+
+                    a {
+                        padding: 1.067rem;
+                    }
+                }
+            }
+        }
+
+        .line {
+            top: 215rem;
+        }
+    }
+}
